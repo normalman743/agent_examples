@@ -1,0 +1,5 @@
+pynput
+pyautogui
+pyperclip
+pandas
+openpyxl

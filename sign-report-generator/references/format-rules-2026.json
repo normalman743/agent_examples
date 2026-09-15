@@ -1,0 +1,52 @@
+{
+  "_comment": "只装排版规则（字体/字号/加粗/行距/缩进/页边距），对照 references/format-standard.md。不装任何默认内容文字（比如称呼、收尾句）——那些是业务约定不是标准规定，必须由数据 JSON 自己写，不在这里兜底。以后标准变了：改这个文件里的数值，或者复制一份新文件（比如 format-rules-2027.json）在数据 JSON 里用 format_config 字段指过去，不用改 generate_from_json.py 代码。",
+  "page": {
+    "width_cm": 21,
+    "height_cm": 29.7,
+    "margin_top_cm": 3.7,
+    "margin_bottom_cm": 3.5,
+    "margin_left_cm": 2.8,
+    "margin_right_cm": 2.6
+  },
+  "_comment_font": "只支持这四款字体，不做等效变体识别：方正小标宋简体（标题/附件标题）、黑体（一级序号）、楷体（二级序号）、仿宋_GB2312（正文/主送单位/三四级序号/附件说明/落款）。font 字段就是普通字符串，generate_from_json.py 和 check_format.py 都按精确匹配处理。",
+  "title": {
+    "font": "方正小标宋简体",
+    "pt": 22,
+    "space_after": 16
+  },
+  "recipient": {
+    "font": "仿宋_GB2312",
+    "pt": 16,
+    "space_before": 16
+  },
+  "body": {
+    "font": "仿宋_GB2312",
+    "pt": 16,
+    "line_spacing": 28,
+    "indent": 32
+  },
+  "headings": {
+    "1": {"font": "黑体", "pt": 16, "bold": false},
+    "2": {"font": "楷体", "pt": 16, "bold": true},
+    "3": {"font": "仿宋_GB2312", "pt": 16, "bold": true},
+    "4": {"font": "仿宋_GB2312", "pt": 16, "bold": false}
+  },
+  "attachment": {
+    "font": "仿宋_GB2312",
+    "pt": 16,
+    "indent": 32,
+    "hang": 80
+  },
+  "table": {
+    "font": "仿宋_GB2312",
+    "pt": 12,
+    "border_size": 4,
+    "border_color": "000000",
+    "header_shade": "D9D9D9"
+  },
+  "footer": {
+    "font": "仿宋_GB2312",
+    "pt": 16,
+    "right_indent": 32
+  }
+}

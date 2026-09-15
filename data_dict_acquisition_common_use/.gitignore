@@ -1,0 +1,17 @@
+# Credentials — never commit
+api/**/.env
+api/**/cookies.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# macOS
+.DS_Store
+
+# Output data (large, regenerate locally)
+api/**/dict/
+api/**/rawdata/*.json
+api/**/rawdata/*.xlsx
